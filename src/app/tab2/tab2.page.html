@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Tab 2
+      Área do Triângulo
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -9,9 +9,35 @@
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Tab 2</ion-title>
+      <ion-title size="small"> Área do Triângulo</ion-title>
     </ion-toolbar>
   </ion-header>
 
-  <app-explore-container name="Tab 2 page"></app-explore-container>
+  <div id="container">
+    <ion-item>
+      <ion-label position='floating'> Lado A: </ion-label>
+      <ion-input [(ngModel)]="num1" type="number"> </ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position='floating'> Lado B: </ion-label>
+      <ion-input [(ngModel)]="num2" type="number"> </ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position='floating'> Lado C: </ion-label>
+      <ion-input [(ngModel)]="num3" type="number"> </ion-input>
+    </ion-item>
+
+    <ion-button shape="round" color='dark'(click) ="soma()">Descobrir Area</ion-button> <!-- (click)="" -->
+
+    <!-- é pra colocar um alert vibe modal -->
+  </div>
 </ion-content>
+
+
+<!-- 1 se existe e o tipo
+
+2 area baseadp nos lados
+
+3 tela area baseado em area e altura -->
