@@ -16,15 +16,15 @@
   <div id="container">
     <ion-item>
       <ion-label position='floating'> Base: </ion-label>
-      <ion-input [(ngModel)]="num1" type="number"> </ion-input>
+      <ion-input [(ngModel)]="base" type="number"> </ion-input>
     </ion-item>
 
     <ion-item>
       <ion-label position='floating'> Altura: </ion-label>
-      <ion-input [(ngModel)]="num2" type="number"> </ion-input>
+      <ion-input [(ngModel)]="alt" type="number"> </ion-input>
     </ion-item>
 
-    <ion-button shape="round" color='dark' >Descobrir Area</ion-button> <!-- (click)="" -->
+    <ion-button shape="round" color='dark' (click)="area_2()" >Descobrir Area</ion-button> <!-- (click)="area_2()" -->
   </div>
 
   

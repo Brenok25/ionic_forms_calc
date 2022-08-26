@@ -16,20 +16,20 @@
   <div id="container">
     <ion-item>
       <ion-label position='floating'> Lado A: </ion-label>
-      <ion-input [(ngModel)]="num1" type="number"> </ion-input>
+      <ion-input [(ngModel)]="ladA" type="number"> </ion-input>
     </ion-item>
 
     <ion-item>
       <ion-label position='floating'> Lado B: </ion-label>
-      <ion-input [(ngModel)]="num2" type="number"> </ion-input>
+      <ion-input [(ngModel)]="ladB" type="number"> </ion-input>
     </ion-item>
 
     <ion-item>
       <ion-label position='floating'> Lado C: </ion-label>
-      <ion-input [(ngModel)]="num3" type="number"> </ion-input>
+      <ion-input [(ngModel)]="ladC" type="number"> </ion-input>
     </ion-item>
 
-    <ion-button shape="round" color='dark'(click) ="soma()">Descobrir Area</ion-button> <!-- (click)="" -->
+    <ion-button shape="round" color='dark'(click) ="area_3()">Descobrir Area</ion-button> <!-- (click)="" -->
 
     <!-- é pra colocar um alert vibe modal -->
   </div>

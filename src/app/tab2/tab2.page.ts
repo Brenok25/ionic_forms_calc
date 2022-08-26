@@ -7,17 +7,18 @@ import { AlertController } from '@ionic/angular';
   styleUrls: ['tab2.page.scss', '../explore-container/explore-container.component.scss']
 })
 export class Tab2Page {
-
-  num1 : '1'
-  num2 : '2'
+  
+  ladA : string
+  ladB : string
+  ladC : string
   saida: string
 
   constructor(private alertController: AlertController) {}
 
-  async presentAlert(op : string, name:string) {
+  async presentAlert() {
     const alert = await this.alertController.create({
       header: 'A area do triangulo é: ',
-      subHeader: this.num1 + op + this.num2,
+      subHeader: "",
       message: this.saida,
       buttons: ['fechar'],
     });
@@ -26,15 +27,15 @@ export class Tab2Page {
   }
 
   
-  soma(){
-    var op = "+"
-    var name = "Soma"
-    var n1 = parseFloat(this.num1)
-    var n2 = parseFloat(this.num2)
-    var result = n1 + n2
-    this.saida = result.toString()
+  area_3(){
+    var LadoA = parseFloat(this.ladA)
+    var LadoB = parseFloat(this.ladB)
+    var LadoC = parseFloat(this.ladC)
+    var sp = (LadoA + LadoB + LadoC) / 2
+    var area = (sp*(sp - LadoA)*(sp - LadoB)*(sp - LadoC))**(0.5) //.toFixed(2)
+    this.saida = area.toString()
 
-    this.presentAlert(op, name)
+    this.presentAlert()
   }
 
 }
