@@ -26,16 +26,25 @@ export class Tab2Page {
     await alert.present();
   }
 
-  
+    
   area_3(){
-    var LadoA = parseFloat(this.ladA)
-    var LadoB = parseFloat(this.ladB)
-    var LadoC = parseFloat(this.ladC)
-    var sp = (LadoA + LadoB + LadoC) / 2
-    var area = (sp*(sp - LadoA)*(sp - LadoB)*(sp - LadoC))**(0.5) //.toFixed(2)
-    this.saida = area.toString()
 
-    this.presentAlert()
+    if (LadoA + LadoB > LadoC && LadoA + LadoC > LadoB && LadoB + LadoC > LadoA){
+      var LadoA = parseFloat(this.ladA)
+      var LadoB = parseFloat(this.ladB)
+      var LadoC = parseFloat(this.ladC)
+      var sp = (LadoA + LadoB + LadoC) / 2
+      var area = (sp*(sp - LadoA)*(sp - LadoB)*(sp - LadoC))**(0.5) //.toFixed(2)
+      this.saida = area.toString()
+
+      this.presentAlert()
+
+    }
+
+    else{
+      this.saida = 'Triangulo não existe'
+      this.presentAlert()
+    }
   }
 
 }
